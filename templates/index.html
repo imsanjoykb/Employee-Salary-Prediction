@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Employee Salary Prediction</title>
+</head>
+<body>
+    <!-- Website Title -->
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">Employee Salary Prediction</span></h2>
+        <div class='description'>
+            <p>A Machine Learning Web App, Built with Flask</p>
+        </div>
+    </div>
+
+   <!-- Text Area -->
+    <div class="ml-container">
+        <form action="{{url_for('predict')}}" method="POST">
+            
+            <input type="text" name="experience" placeholder="Experience" required="required" />
+            <input type="text" name="test_score" placeholder="Test Score" required="required" />
+		        <input type="text" name="interview_score" placeholder="Interview Score" required="required" /><br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+
+            
+        </form>
+    </div>
+    <br>
+    <br>
+    {{ prediction_text }}
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/imsanjoykb"><i class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/imsanjoykb/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+        <p class='footer-description'>Developed By Sanjoy Biswas</p>
+    </div>
+
+</body>
+</html>
